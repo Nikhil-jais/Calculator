@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 body {
@@ -9,57 +10,91 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    background: linear-gradient(135deg, #141e30, #243b55);
 }
 
+/* Calculator Box */
 .calculator {
-    width: 320px;
-    padding: 20px;
-    border-radius: 20px;
-    background: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    padding: 25px;
+    border-radius: 25px;
+    background: #1e1e1e;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
+/* Display */
 #display {
     width: 100%;
-    height: 70px;
-    margin-bottom: 15px;
-    padding: 10px;
+    height: 80px;
+    margin-bottom: 20px;
+    padding: 15px;
     border: none;
-    border-radius: 10px;
-    background: #eeeeee;
+    border-radius: 15px;
+    background: #111;
+    color: white;
+    font-size: 32px;
     text-align: right;
-    font-size: 30px;
+    outline: none;
 }
 
+/* Buttons Container */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 12px;
 }
 
+/* All Buttons */
 button {
-    height: 60px;
+    height: 65px;
     border: none;
-    border-radius: 12px;
-    font-size: 20px;
+    border-radius: 15px;
+    background: #333;
+    color: white;
+    font-size: 22px;
     cursor: pointer;
-    background: #e9e9e9;
+    transition: all 0.15s ease;
 }
 
+/* Hover Effect */
 button:hover {
-    opacity: 0.8;
+    transform: translateY(-3px);
+    background: #444;
 }
 
+/* Click Effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Operator Buttons */
 .operator {
-    font-weight: bold;
+    background: #ff9500;
 }
 
+.operator:hover {
+    background: #ffad33;
+}
+
+/* Clear Button */
+.clear {
+    background: #e63946;
+}
+
+.clear:hover {
+    background: #ff4d5a;
+}
+
+/* Equals Button */
 .equals {
-    grid-column: span 2;
+    background: #2a9d8f;
 }
 
+.equals:hover {
+    background: #35b5a5;
+}
+
+/* Zero Button */
 .zero {
     grid-column: span 2;
 }
