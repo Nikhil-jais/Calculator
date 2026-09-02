@@ -98,3 +98,27 @@ button:active {
 .zero {
     grid-column: span 2;
 }
+
+/* Responsive Design */
+
+@media (max-width: 500px) {
+
+    .calculator {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #display {
+        height: 70px;
+        font-size: 28px;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    button {
+        height: 60px;
+        font-size: 20px;
+    }
+}
